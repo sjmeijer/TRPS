@@ -1,0 +1,13 @@
+/gps/particle gamma
+/gps/pos/type Plane
+/gps/pos/shape Square
+/gps/pos/centre 1. 2. 1. cm
+/gps/pos/halfx 2. cm
+/gps/pos/halfy 2. cm
+/gps/ang/type cos
+/gps/ene/type Lin
+/gps/ene/min 0.5 MeV
+/gps/ene/max 3. MeV
+/gps/ene/gradient 1.
+/gps/ene/intercept 1.
+/run/beamOn 1

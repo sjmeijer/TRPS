@@ -1,0 +1,12 @@
+Johnny Goett - goett@lanl.gov
+12.16.13
+
+This program demonstrates simple phonon propagation in a Germanium crystal.
+It is based upon code provided by Daniel Brandt at SLAC.
+
+The code has been modified to introduce a cubic Ge crystal 2 cm on axis with 
+Aluminum TES's covering each face.
+
+Each event begins with the generation of a single phonon at the center of the crystal. Propogation incorporates phonon scattering and down conversion processes. 
+
+In the future a custom physics process that generates phonons from charged particle propagation will be added.
