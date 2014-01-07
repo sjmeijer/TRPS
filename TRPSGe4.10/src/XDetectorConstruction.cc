@@ -136,15 +136,15 @@ void XDetectorConstruction::SetupGeometry()
   //
   // Aluminum - crystal end caps. This is where phonon hits are registered
   //
-  G4VSolid* fAlSolid = new G4Box("fAluminumSolid",2.5*cm,2.5*cm,0.025*cm);
+  //G4VSolid* fAlSolid = new G4Box("fAluminumSolid",2.5*cm,2.5*cm,0.025*cm);
 
-  G4LogicalVolume* fAlLogical = new G4LogicalVolume(fAlSolid,fAluminum,"fAlLogical");
-  new G4PVPlacement(0,G4ThreeVector(0.,0.,2.5*cm),fAlLogical,"fAlPhysical",worldLogical,false,0);
-  new G4PVPlacement(0,G4ThreeVector(0.,0.,-2.5*cm),fAlLogical,"fAlPhysical",worldLogical,false,1);
-  G4RotationMatrix* rotm = new G4RotationMatrix();
-  rotm->rotateY(90*deg);
-  new G4PVPlacement(rotm,G4ThreeVector(2.5*cm,0.,0.),fAlLogical,"fAlPhysical",worldLogical,false,1);
-  new G4PVPlacement(rotm,G4ThreeVector(-2.5*cm,0.,0.),fAlLogical,"fAlPhysical",worldLogical,false,1);
+  //G4LogicalVolume* fAlLogical = new G4LogicalVolume(fAlSolid,fAluminum,"fAlLogical");
+  //new G4PVPlacement(0,G4ThreeVector(0.,0.,2.5*cm),fAlLogical,"fAlPhysical",worldLogical,false,0);
+  //new G4PVPlacement(0,G4ThreeVector(0.,0.,-2.5*cm),fAlLogical,"fAlPhysical",worldLogical,false,1);
+  //G4RotationMatrix* rotm = new G4RotationMatrix();
+  //rotm->rotateY(90*deg);
+  //new G4PVPlacement(rotm,G4ThreeVector(2.5*cm,0.,0.),fAlLogical,"fAlPhysical",worldLogical,false,1);
+  //new G4PVPlacement(rotm,G4ThreeVector(-2.5*cm,0.,0.),fAlLogical,"fAlPhysical",worldLogical,false,1);
   //rotm->rotateY(-90*deg);
   //rotm->rotateX(90*deg);
   //rotm->rotateZ(90*deg);
@@ -166,5 +166,5 @@ void XDetectorConstruction::SetupGeometry()
   G4VisAttributes* simpleBoxVisAtt= new G4VisAttributes(G4Colour(1.0,1.0,1.0));
   simpleBoxVisAtt->SetVisibility(true);
   fGermaniumLogical->SetVisAttributes(simpleBoxVisAtt);
-  fAlLogical->SetVisAttributes(simpleBoxVisAtt);
+  //fAlLogical->SetVisAttributes(simpleBoxVisAtt);
 }

@@ -11,8 +11,8 @@
 # draw scene
 #
 /vis/viewer/reset
-/vis/viewer/set/viewpointThetaPhi 180. 90. deg
-/vis/viewer/zoom 1.4
+/vis/viewer/set/viewpointThetaPhi 30. 30. deg
+/vis/viewer/zoom 1.0
 #
 # for drawing the tracks
 # (if too many tracks cause core dump => storeTrajectory 0)
