@@ -10,3 +10,7 @@ Aluminum TES's covering each face.
 Each event begins with the generation of a single phonon at the center of the crystal. Propogation incorporates phonon scattering and down conversion processes. 
 
 In the future a custom physics process that generates phonons from charged particle propagation will be added.
+
+* Installation instructions
+1) Install Geant4 version 9.6.2 with OpenGL enabled  and configure your environment as described in the application developers manual.
+2) Run cmake in a fresh directory pointing to this source directory. ex: 
