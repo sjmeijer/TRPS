@@ -11,8 +11,9 @@
 # draw scene
 #
 /vis/viewer/reset
-/vis/viewer/set/viewpointThetaPhi 30. 30. deg
+/vis/viewer/set/viewpointThetaPhi 45. 150. deg
 /vis/viewer/zoom 1.0
+
 #
 # for drawing the tracks
 # (if too many tracks cause core dump => storeTrajectory 0)
@@ -20,6 +21,7 @@
 /vis/scene/endOfEventAction accumulate
 /vis/scene/add/trajectories
 /vis/scene/add/hits
+/vis/scene/add/axes 3.5 3.5 3.5 1 cm
 
 
 /vis/modeling/trajectories/create/drawByParticleID
