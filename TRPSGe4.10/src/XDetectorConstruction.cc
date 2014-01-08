@@ -46,7 +46,7 @@
 #include "G4Colour.hh"
 #include "G4SDManager.hh"
 
-#include "XAluminumElectrodeSensitivity.hh"
+#include "TESSensitivity.hh"
 #include "G4LatticePhysical.hh"
 #include "G4LatticeLogical.hh"
 #include "G4LatticeManager.hh"
@@ -154,7 +154,7 @@ void XDetectorConstruction::SetupGeometry()
   // detector -- Note : Aluminum electrode sensitivity is attached to Germanium 
   //
   G4SDManager* SDman = G4SDManager::GetSDMpointer();
-  XAluminumElectrodeSensitivity* electrodeSensitivity = new XAluminumElectrodeSensitivity("XAluminumElectrode");
+  TESSensitivity* electrodeSensitivity = new TESSensitivity("TES");
   SDman->AddNewDetector(electrodeSensitivity);
   fGermaniumLogical->SetSensitiveDetector(electrodeSensitivity);
 
