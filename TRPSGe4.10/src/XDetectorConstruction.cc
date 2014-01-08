@@ -136,20 +136,19 @@ void XDetectorConstruction::SetupGeometry()
   //
   // Aluminum - crystal end caps. This is where phonon hits are registered
   //
-  //G4VSolid* fAlSolid = new G4Box("fAluminumSolid",2.5*cm,2.5*cm,0.025*cm);
+  G4VSolid* fAlSolid = new G4Box("fAluminumSolid",2.0*cm,2.0*cm,0.025*cm);
 
-  //G4LogicalVolume* fAlLogical = new G4LogicalVolume(fAlSolid,fAluminum,"fAlLogical");
-  //new G4PVPlacement(0,G4ThreeVector(0.,0.,2.5*cm),fAlLogical,"fAlPhysical",worldLogical,false,0);
-  //new G4PVPlacement(0,G4ThreeVector(0.,0.,-2.5*cm),fAlLogical,"fAlPhysical",worldLogical,false,1);
-  //G4RotationMatrix* rotm = new G4RotationMatrix();
-  //rotm->rotateY(90*deg);
-  //new G4PVPlacement(rotm,G4ThreeVector(2.5*cm,0.,0.),fAlLogical,"fAlPhysical",worldLogical,false,1);
-  //new G4PVPlacement(rotm,G4ThreeVector(-2.5*cm,0.,0.),fAlLogical,"fAlPhysical",worldLogical,false,1);
-  //rotm->rotateY(-90*deg);
-  //rotm->rotateX(90*deg);
-  //rotm->rotateZ(90*deg);
-  //new G4PVPlacement(rotm,G4ThreeVector(0.,-2.5*cm,0.),fAlLogical,"fAlPhysical",worldLogical,false,1);
-  //new G4PVPlacement(rotm,G4ThreeVector(0.,-2.5*cm,0.),fAlLogical,"fAlPhysical",worldLogical,false,1);
+  G4LogicalVolume* fAlLogical = new G4LogicalVolume(fAlSolid,fAluminum,"fAlLogical");
+  new G4PVPlacement(0,G4ThreeVector(0.,0.,2.5*cm+0.025*cm),fAlLogical,"fAlPhysical",worldLogical,false,0);
+  new G4PVPlacement(0,G4ThreeVector(0.,0.,-2.5*cm-0.025*cm),fAlLogical,"fAlPhysical",worldLogical,false,1);
+  G4RotationMatrix* rotm23 = new G4RotationMatrix();
+  rotm23->rotateY(90*deg);
+  new G4PVPlacement(rotm23,G4ThreeVector(2.5*cm+0.025*cm,0.,0.),fAlLogical,"fAlPhysical",worldLogical,false,2);
+  new G4PVPlacement(rotm23,G4ThreeVector(-2.5*cm-0.025*cm,0.,0.),fAlLogical,"fAlPhysical",worldLogical,false,3);
+  G4RotationMatrix* rotm45 = new G4RotationMatrix();
+  rotm45->rotateX(90*deg);
+  new G4PVPlacement(rotm45,G4ThreeVector(0.,2.5*cm+0.025*cm,0.),fAlLogical,"fAlPhysical",worldLogical,false,4);
+  new G4PVPlacement(rotm45,G4ThreeVector(0.,-2.5*cm-0.025*cm,0.),fAlLogical,"fAlPhysical",worldLogical,false,5);
 
   //
   // detector -- Note : Aluminum electrode sensitivity is attached to Germanium 
@@ -163,8 +162,10 @@ void XDetectorConstruction::SetupGeometry()
   // Visualization attributes
   //
   worldLogical->SetVisAttributes(G4VisAttributes::Invisible);
-  G4VisAttributes* simpleBoxVisAtt= new G4VisAttributes(G4Colour(1.0,1.0,1.0));
-  simpleBoxVisAtt->SetVisibility(true);
-  fGermaniumLogical->SetVisAttributes(simpleBoxVisAtt);
-  //fAlLogical->SetVisAttributes(simpleBoxVisAtt);
+  G4VisAttributes* GeVisAtt= new G4VisAttributes(G4Colour(1.0,1.0,1.0));
+  G4VisAttributes* AlVisAtt= new G4VisAttributes(G4Colour(0.0,1.0,0.0));
+  GeVisAtt->SetVisibility(true);
+  AlVisAtt->SetVisibility(true);
+  fGermaniumLogical->SetVisAttributes(GeVisAtt);
+  fAlLogical->SetVisAttributes(AlVisAtt);
 }
