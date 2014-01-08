@@ -31,6 +31,7 @@ class TESHit : public G4VHit
   private:
       G4double fTime;
       G4double fEdep;
+      G4int fPol;
       G4ThreeVector fLocalPos;
       G4ThreeVector fWorldPos;
 
@@ -39,6 +40,8 @@ class TESHit : public G4VHit
       inline G4double GetTime() const { return fTime; }
       inline void SetEDep(G4double e) { fEdep = e; }
       inline G4double GetEDep() const { return fEdep; }
+      inline void SetPol(G4int pol) { fPol = pol; }
+      inline G4int GetPol() const { return fPol; }
       inline void SetLocalPos(G4ThreeVector xyz) { fLocalPos = xyz; }
       inline G4ThreeVector GetLocalPos() const { return fLocalPos; }
       inline void SetWorldPos(G4ThreeVector xyz) { fWorldPos = xyz; }

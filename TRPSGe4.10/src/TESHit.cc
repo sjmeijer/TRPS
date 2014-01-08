@@ -21,6 +21,7 @@ TESHit::TESHit()
 {
   fTime = 0.;
   fEdep = 0.;
+  fPol = 10.;
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo....
@@ -34,6 +35,7 @@ TESHit::TESHit(const TESHit &right)
 : G4VHit() {
   fTime = right.fTime;
   fEdep = right.fEdep;
+  fPol = right.fPol;
   fWorldPos = right.fWorldPos;
   fLocalPos = right.fLocalPos;
 }
@@ -44,6 +46,7 @@ const TESHit& TESHit::operator=(const TESHit &right)
 {
   fTime = right.fTime;
   fEdep = right.fEdep;
+  fPol = right.fPol;
   fWorldPos = right.fWorldPos;
   fLocalPos = right.fLocalPos;
   return *this;
@@ -91,6 +94,9 @@ const std::map<G4String,G4AttDef>* TESHit::GetAttDefs() const
 
     G4String EDep("EDep");
     (*store)[EDep] = G4AttDef(Time,"EDep","Physics","G4BestUnit","G4double");
+    
+    G4String Pol("Pol");
+    (*store)[Pol] = G4AttDef(Time,"Pol","Physics","G4BestUnit","G4int");
 
     G4String Pos("Pos");
     (*store)[Pos] = G4AttDef(Pos, "Position",
@@ -112,6 +118,9 @@ std::vector<G4AttValue>* TESHit::CreateAttValues() const
 
   values->push_back
     (G4AttValue("EDep",G4BestUnit(fEdep,"Energy"),""));
+  
+values->push_back
+    (G4AttValue("Pol",G4BestUnit(fPol,"Polarization"),""));
 
   values->push_back
     (G4AttValue("Pos",G4BestUnit(fWorldPos,"Length"),""));
@@ -124,7 +133,7 @@ std::vector<G4AttValue>* TESHit::CreateAttValues() const
 void TESHit::Print()
 {
   G4cout << "  time " << fTime/ns << " (nsec) : at " << fLocalPos
-         << "  -- fEdep = " << fEdep/eV << " [eV]" << G4endl;
+         << "  -- fEdep = " << fEdep/eV << " [eV]   with polarization: " << fPol << G4endl;
 }
 
 
