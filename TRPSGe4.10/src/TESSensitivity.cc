@@ -81,6 +81,13 @@ G4bool TESSensitivity::ProcessHits(G4Step* aStep,
   //if(aStep->GetTrack()->GetDefinition()!=Phonon::PhononDefinition()) return true;
   G4double edp = aStep->GetNonIonizingEnergyDeposit();
   if(edp==0.) return true;
+  G4String p_name; 
+  p_name = aStep->GetTrack()->GetDefinition()->GetParticleName();
+  
+  G4int pol = 10;
+  if( p_name == "phononTF") pol = 1;
+  else if( p_name == "phononTS") pol = 2;
+  else if( p_name == "phononL") pol = 3;
 
   G4StepPoint* preStepPoint = aStep->GetPreStepPoint();
   G4StepPoint* postStepPoint = aStep->GetPostStepPoint();
@@ -93,6 +100,7 @@ G4bool TESSensitivity::ProcessHits(G4Step* aStep,
   TESHit* aHit = new TESHit();
   aHit->SetTime(postStepPoint->GetGlobalTime());
   aHit->SetEDep(edp);
+  aHit->SetPol(pol);
   aHit->SetWorldPos(fWorldPos);
   aHit->SetLocalPos(fLocalPos);
 
