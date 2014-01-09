@@ -73,7 +73,17 @@ int main(int argc,char** argv)
 
  G4VUserPrimaryGeneratorAction* gen_action = new XPrimaryGeneratorAction();
  runManager->SetUserAction(gen_action);
- //
+ 
+ RunAction* run_action = new RunAction;
+ runManager->SetUserAction(run_action);
+ G4String fileName;
+ if(argc > 2){
+	fileName=argv[2];
+	run_action->SetOutputFileName(fileName);
+ }
+ else{
+	run_action->SetOutputFileName("TRPS");
+ }
 
 #ifdef G4VIS_USE
  // Visualization manager
