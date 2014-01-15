@@ -1,7 +1,4 @@
 #include "EventR.hh"
-#include "TrackerHit.hh"
-#include "EvStep.hh"
-#include "EvTrack.hh"
 
 EventR* EventR::instance = NULL;
 
@@ -12,23 +9,9 @@ return instance;
 }
 
 EventR::EventR(){
-	truth = new EvTruth();
-	hits = new EvHit();
-	steps = new EvStep();
-	tracks = new EvTrack();
 }
 
 EventR::~EventR(){
-	if (instance) {
-		delete n;
-		delete TESid;
-		delete time;
-		delete Edep;
-		delete Pol;
-		delete positionsX;
-		delete positionsY;
-		delete positionsZ;
-	}
 }
 
 void EventR::clear(){
@@ -41,25 +24,25 @@ void EventR::clear(){
 	positionsZ.clear();
 }
 
-void PushTESid(G4int id){
+void EventR::PushTESid(G4int id){
 	TESid.push_back(id);
 }
-void PushTEStime(G4double t){
+void EventR::PushTEStime(G4double t){
 	time.push_back(t);
 }
-void PushTESEdep(G4double e){
+void EventR::PushTESEdep(G4double e){
 	Edep.push_back(e);
 }
-void PushTESX(G4double){
-	positionsX.push_back(y);
+void EventR::PushTESX(G4double x){
+	positionsX.push_back(x);
 }
-void PushTESY(G4double y){
+void EventR::PushTESY(G4double y){
 	positionsY.push_back(y);
 }
-void PushTESZ(G4double z){
+void EventR::PushTESZ(G4double z){
 	positionsZ.push_back(z);
 }
-void PushPol(G4int a){
+void EventR::PushPol(G4int a){
 	Pol.push_back(a);
 }
 
