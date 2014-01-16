@@ -27,7 +27,7 @@ void RunAction::BeginOfRunAction(const G4Run* aRun)
 	G4RunManager::GetRunManager()->SetRandomNumberStore(true);
 
 	//initialize output
-	TRPSTree* mytree = MyTree::Instance("tree","tree");
+	TRPSTree* mytree = TRPSTree::Instance("tree","tree");
 
 	// outfile = new TFile("prova.root","RECREATE");
 	runMessenger = new RunMessenger(this);

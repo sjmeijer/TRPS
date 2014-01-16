@@ -34,7 +34,7 @@ void EventAction::BeginOfEventAction(const G4Event* evt)
 
 void EventAction::EndOfEventAction(const G4Event* evt)
 {
-  TRPSTree* mytree = MyTree::Instance("tree","tree");
+  TRPSTree* mytree = TRPSTree::Instance("tree","tree");
   mytree->Fill();
 
   EventR* eventR = EventR::Instance();

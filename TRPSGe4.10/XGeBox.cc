@@ -44,6 +44,7 @@
 #include "XDetectorConstruction.hh"
 #include "XPhysicsList.hh"
 #include "XPrimaryGeneratorAction.hh"
+#include "RunAction.hh"
 #include "XPhononStackingAction.hh"
 
 int main(int argc,char** argv)
@@ -114,8 +115,8 @@ int main(int argc,char** argv)
  else           // Batch mode
  {
    G4String command = "/control/execute ";
-   G4String fileName = argv[1];
-   UImanager->ApplyCommand(command+fileName);
+   G4String scriptName = argv[1];
+   UImanager->ApplyCommand(command+scriptName);
  }
 
 #ifdef G4VIS_USE

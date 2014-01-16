@@ -10,6 +10,7 @@
 #include "G4Navigator.hh"
 #include "G4SystemOfUnits.hh"
 #include "G4ios.hh"
+#include "EventR.hh"
 
 
 using namespace std;
@@ -105,6 +106,15 @@ G4bool TESSensitivity::ProcessHits(G4Step* aStep,
   aHit->SetLocalPos(fLocalPos);
 
   fHitsCollection->insert(aHit);
+
+  EventR* eventR = EventR::Instance();
+  eventR->PushTESid(1);
+  eventR->PushTEStime(postStepPoint->GetGlobalTime());
+  eventR->PushTESEdep(edp);
+  eventR->PushPol(pol);
+  eventR->PushTESX(fWorldPos.getX()/mm);
+  eventR->PushTESY(fWorldPos.getY()/mm);
+  eventR->PushTESZ(fWorldPos.getZ()/mm);
 
   fWriter<<"\n"<<fWorldPos.getX()/mm
          <<","<<fWorldPos.getY()/mm

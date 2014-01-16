@@ -4,9 +4,13 @@
 #include "G4UserEventAction.hh"
 #include "globals.hh"
 
-class RunAction;
-class EventActionMessenger;
-class EventR;
+#include "RunAction.hh"
+#include "EventActionMessenger.hh"
+#include "EventR.hh"
+
+//class RunAction;
+//class EventActionMessenger;
+//class EventR;
 
 class EventAction : public G4UserEventAction
 {
