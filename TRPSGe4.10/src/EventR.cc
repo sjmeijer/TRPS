@@ -24,6 +24,14 @@ void EventR::clear(){
 	positionsZ.clear();
 }
 
+void EventR::Print(){
+	G4cout << " TES: " << '\t' << " time: " << '\t' << " Edep: " << '\t' << " Pol. " << G4endl;
+	for(int i = 0; i<Pol.size(); i++)
+	{
+		G4cout << TESid[i] << time[i] << Edep[i] << Pol[i] << G4endl;
+	}
+}
+
 void EventR::PushTESid(G4int id){
 	TESid.push_back(id);
 }

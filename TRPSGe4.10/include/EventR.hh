@@ -1,6 +1,7 @@
 #ifndef EventR_h
 #define EventR_h
 #include "TESHit.hh"
+#include "G4ios.hh"
 
 class EventR
 {
@@ -9,6 +10,8 @@ class EventR
 		static EventR* Instance();
 		~EventR();
 		void clear();
+
+		void Print();
 		
 		void PushTESid(G4int);
 		void PushTEStime(G4double);

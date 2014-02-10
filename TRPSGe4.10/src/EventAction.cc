@@ -38,5 +38,6 @@ void EventAction::EndOfEventAction(const G4Event* evt)
   mytree->Fill();
 
   EventR* eventR = EventR::Instance();
+  eventR->Print();
   eventR->clear();
 }  
