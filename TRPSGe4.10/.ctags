@@ -1,0 +1,192 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BeginOfEventAction	src/EventAction.cc	/^void EventAction::BeginOfEventAction(const G4Event* evt)$/;"	f	class:EventAction
+BeginOfRunAction	src/RunAction.cc	/^void RunAction::BeginOfRunAction(const G4Run* aRun)$/;"	f	class:RunAction
+ClassifyNewTrack	src/XPhononStackingAction.cc	/^XPhononStackingAction::ClassifyNewTrack(const G4Track* aTrack) {$/;"	f	class:XPhononStackingAction
+Construct	src/XDetectorConstruction.cc	/^G4VPhysicalVolume* XDetectorConstruction::Construct()$/;"	f	class:XDetectorConstruction
+ConstructParticle	src/XPhysicsList.cc	/^void XPhysicsList::ConstructParticle() {$/;"	f	class:XPhysicsList
+ConstructProcess	src/XPhysicsList.cc	/^void XPhysicsList::ConstructProcess() {$/;"	f	class:XPhysicsList
+CreateAttValues	src/TESHit.cc	/^std::vector<G4AttValue>* TESHit::CreateAttValues() const$/;"	f	class:TESHit
+CreateAttValues	src/XAluminumElectrodeHit.cc	/^std::vector<G4AttValue>* XAluminumElectrodeHit::CreateAttValues() const$/;"	f	class:XAluminumElectrodeHit
+DefineMaterials	src/XDetectorConstruction.cc	/^void XDetectorConstruction::DefineMaterials()$/;"	f	class:XDetectorConstruction
+Draw	src/TESHit.cc	/^void TESHit::Draw()$/;"	f	class:TESHit
+Draw	src/XAluminumElectrodeHit.cc	/^void XAluminumElectrodeHit::Draw()$/;"	f	class:XAluminumElectrodeHit
+Edep	include/EventR.hh	/^		std::vector<double> Edep;$/;"	m	class:EventR
+EndOfEvent	src/TESSensitivity.cc	/^void TESSensitivity::EndOfEvent(G4HCofThisEvent* \/*HCE*\/)$/;"	f	class:TESSensitivity
+EndOfEvent	src/XAluminumElectrodeSensitivity.cc	/^void XAluminumElectrodeSensitivity::EndOfEvent(G4HCofThisEvent* \/*HCE*\/)$/;"	f	class:XAluminumElectrodeSensitivity
+EndOfEventAction	src/EventAction.cc	/^void EventAction::EndOfEventAction(const G4Event* evt)$/;"	f	class:EventAction
+EndOfRunAction	src/RunAction.cc	/^void RunAction::EndOfRunAction(const G4Run* aRun)$/;"	f	class:RunAction
+EventAction	include/EventAction.hh	/^class EventAction : public G4UserEventAction$/;"	c
+EventAction	src/EventAction.cc	/^EventAction::EventAction(RunAction* run)$/;"	f	class:EventAction
+EventActionMessenger	include/EventActionMessenger.hh	/^class EventActionMessenger: public G4UImessenger$/;"	c
+EventActionMessenger	src/EventActionMessenger.cc	/^EventActionMessenger::EventActionMessenger(EventAction* EvAct)$/;"	f	class:EventActionMessenger
+EventActionMessenger_h	include/EventActionMessenger.hh	/^#define EventActionMessenger_h /;"	d
+EventAction_h	include/EventAction.hh	/^#define EventAction_h /;"	d
+EventR	include/EventR.hh	/^class EventR$/;"	c
+EventR	src/EventR.cc	/^EventR::EventR(){$/;"	f	class:EventR
+EventR_h	include/EventR.hh	/^#define EventR_h$/;"	d
+Field	include/XDetectorConstruction.hh	/^  inline void Field(G4bool bl) { fIfField = bl; }$/;"	f	class:XDetectorConstruction
+G4EXLIB	GNUmakefile	/^G4EXLIB := true$/;"	m
+G4INSTALL	GNUmakefile	/^  G4INSTALL = ~\/geant4$/;"	m
+G4TARGET	GNUmakefile	/^G4TARGET := $(name)$/;"	m
+GeneratePrimaries	src/XPrimaryGeneratorAction.cc	/^void XPrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)$/;"	f	class:XPrimaryGeneratorAction
+GetAttDefs	src/TESHit.cc	/^const std::map<G4String,G4AttDef>* TESHit::GetAttDefs() const$/;"	f	class:TESHit
+GetAttDefs	src/XAluminumElectrodeHit.cc	/^const std::map<G4String,G4AttDef>* XAluminumElectrodeHit::GetAttDefs() const$/;"	f	class:XAluminumElectrodeHit
+GetEDep	include/TESHit.hh	/^      inline G4double GetEDep() const { return fEdep; }$/;"	f	class:TESHit
+GetEDep	include/XAluminumElectrodeHit.hh	/^      inline G4double GetEDep() const { return fEdep; }$/;"	f	class:XAluminumElectrodeHit
+GetHitsCollection	src/TESSensitivity.cc	/^TESSensitivity::GetHitsCollection(){$/;"	f	class:TESSensitivity
+GetHitsCollection	src/XAluminumElectrodeSensitivity.cc	/^XAluminumElectrodeSensitivity::GetHitsCollection(){$/;"	f	class:XAluminumElectrodeSensitivity
+GetLocalPos	include/TESHit.hh	/^      inline G4ThreeVector GetLocalPos() const { return fLocalPos; }$/;"	f	class:TESHit
+GetLocalPos	include/XAluminumElectrodeHit.hh	/^      inline G4ThreeVector GetLocalPos() const { return fLocalPos; }$/;"	f	class:XAluminumElectrodeHit
+GetPol	include/TESHit.hh	/^      inline G4int GetPol() const { return fPol; }$/;"	f	class:TESHit
+GetTime	include/TESHit.hh	/^      inline G4double GetTime() const { return fTime; }$/;"	f	class:TESHit
+GetTime	include/XAluminumElectrodeHit.hh	/^      inline G4double GetTime() const { return fTime; }$/;"	f	class:XAluminumElectrodeHit
+GetWorldPos	include/TESHit.hh	/^      inline G4ThreeVector GetWorldPos() const { return fWorldPos; }$/;"	f	class:TESHit
+GetWorldPos	include/XAluminumElectrodeHit.hh	/^      inline G4ThreeVector GetWorldPos() const { return fWorldPos; }$/;"	f	class:XAluminumElectrodeHit
+Initialize	src/TESSensitivity.cc	/^void TESSensitivity::Initialize(G4HCofThisEvent*HCE)$/;"	f	class:TESSensitivity
+Initialize	src/XAluminumElectrodeSensitivity.cc	/^void XAluminumElectrodeSensitivity::Initialize(G4HCofThisEvent*HCE)$/;"	f	class:XAluminumElectrodeSensitivity
+Instance	src/EventR.cc	/^EventR* EventR::Instance(){$/;"	f	class:EventR
+Instance	src/TRPSTree.cc	/^TRPSTree* TRPSTree::Instance(const char* name, const char* title){$/;"	f	class:TRPSTree
+My_Tree_h	include/TRPSTree.hh	/^#define My_Tree_h$/;"	d
+Pol	include/EventR.hh	/^		std::vector<int> Pol;$/;"	m	class:EventR
+Print	src/EventR.cc	/^void EventR::Print(){$/;"	f	class:EventR
+Print	src/TESHit.cc	/^void TESHit::Print()$/;"	f	class:TESHit
+Print	src/XAluminumElectrodeHit.cc	/^void XAluminumElectrodeHit::Print()$/;"	f	class:XAluminumElectrodeHit
+PrintCmd	include/EventActionMessenger.hh	/^  G4UIcmdWithAnInteger* PrintCmd;    $/;"	m	class:EventActionMessenger
+ProcessHits	src/TESSensitivity.cc	/^G4bool TESSensitivity::ProcessHits(G4Step* aStep,$/;"	f	class:TESSensitivity
+ProcessHits	src/XAluminumElectrodeSensitivity.cc	/^G4bool XAluminumElectrodeSensitivity::ProcessHits(G4Step* aStep,$/;"	f	class:XAluminumElectrodeSensitivity
+PushPol	src/EventR.cc	/^void EventR::PushPol(G4int a){$/;"	f	class:EventR
+PushTESEdep	src/EventR.cc	/^void EventR::PushTESEdep(G4double e){$/;"	f	class:EventR
+PushTESX	src/EventR.cc	/^void EventR::PushTESX(G4double x){$/;"	f	class:EventR
+PushTESY	src/EventR.cc	/^void EventR::PushTESY(G4double y){$/;"	f	class:EventR
+PushTESZ	src/EventR.cc	/^void EventR::PushTESZ(G4double z){$/;"	f	class:EventR
+PushTESid	src/EventR.cc	/^void EventR::PushTESid(G4int id){$/;"	f	class:EventR
+PushTEStime	src/EventR.cc	/^void EventR::PushTEStime(G4double t){$/;"	f	class:EventR
+RunAction	include/RunAction.hh	/^class RunAction : public G4UserRunAction$/;"	c
+RunAction	src/RunAction.cc	/^RunAction::RunAction()$/;"	f	class:RunAction
+RunAction_h	include/RunAction.hh	/^#define RunAction_h /;"	d
+RunMessenger	include/RunMessenger.hh	/^class RunMessenger: public G4UImessenger$/;"	c
+RunMessenger	src/RunMessenger.cc	/^RunMessenger::RunMessenger(RunAction* run):fRunAction(run)$/;"	f	class:RunMessenger
+RunMessenger_h	include/RunMessenger.hh	/^#define RunMessenger_h /;"	d
+SetCuts	src/XPhysicsList.cc	/^void XPhysicsList::SetCuts() {$/;"	f	class:XPhysicsList
+SetEDep	include/TESHit.hh	/^      inline void SetEDep(G4double e) { fEdep = e; }$/;"	f	class:TESHit
+SetEDep	include/XAluminumElectrodeHit.hh	/^      inline void SetEDep(G4double e) { fEdep = e; }$/;"	f	class:XAluminumElectrodeHit
+SetLocalPos	include/TESHit.hh	/^      inline void SetLocalPos(G4ThreeVector xyz) { fLocalPos = xyz; }$/;"	f	class:TESHit
+SetLocalPos	include/XAluminumElectrodeHit.hh	/^      inline void SetLocalPos(G4ThreeVector xyz) { fLocalPos = xyz; }$/;"	f	class:XAluminumElectrodeHit
+SetNewValue	src/EventActionMessenger.cc	/^void EventActionMessenger::SetNewValue($/;"	f	class:EventActionMessenger
+SetNewValue	src/RunMessenger.cc	/^void RunMessenger::SetNewValue(G4UIcommand* command,$/;"	f	class:RunMessenger
+SetOutputFileName	src/RunAction.cc	/^void RunAction::SetOutputFileName(G4String s){$/;"	f	class:RunAction
+SetPol	include/TESHit.hh	/^      inline void SetPol(G4int pol) { fPol = pol; }$/;"	f	class:TESHit
+SetPrintModulo	include/EventAction.hh	/^  void SetPrintModulo(G4int val)  {printModulo = val;};$/;"	f	class:EventAction
+SetTime	include/TESHit.hh	/^      inline void SetTime(G4double t) { fTime = t; }$/;"	f	class:TESHit
+SetTime	include/XAluminumElectrodeHit.hh	/^      inline void SetTime(G4double t) { fTime = t; }$/;"	f	class:XAluminumElectrodeHit
+SetWorldPos	include/TESHit.hh	/^      inline void SetWorldPos(G4ThreeVector xyz) { fWorldPos = xyz; }$/;"	f	class:TESHit
+SetWorldPos	include/XAluminumElectrodeHit.hh	/^      inline void SetWorldPos(G4ThreeVector xyz) { fWorldPos = xyz; }$/;"	f	class:XAluminumElectrodeHit
+SetupGeometry	src/XDetectorConstruction.cc	/^void XDetectorConstruction::SetupGeometry()$/;"	f	class:XDetectorConstruction
+TESHit	include/TESHit.hh	/^class TESHit : public G4VHit$/;"	c
+TESHit	src/TESHit.cc	/^TESHit::TESHit()$/;"	f	class:TESHit
+TESHit	src/TESHit.cc	/^TESHit::TESHit(const TESHit &right)$/;"	f	class:TESHit
+TESHitAllocator	src/TESHit.cc	/^G4Allocator<TESHit> TESHitAllocator;$/;"	v
+TESHit_h	include/TESHit.hh	/^#define TESHit_h /;"	d
+TESHitsCollection	include/TESHit.hh	/^typedef G4THitsCollection<TESHit> TESHitsCollection;$/;"	t
+TESSensitivity	include/TESSensitivity.hh	/^class TESSensitivity : public G4VSensitiveDetector$/;"	c
+TESSensitivity	src/TESSensitivity.cc	/^TESSensitivity::TESSensitivity(G4String name)$/;"	f	class:TESSensitivity
+TESSensitivity_h	include/TESSensitivity.hh	/^#define TESSensitivity_h /;"	d
+TESid	include/EventR.hh	/^ 		std::vector<int> TESid;$/;"	m	class:EventR
+TRPSTree	include/TRPSTree.hh	/^class TRPSTree: public TTree{$/;"	c
+TRPSTree	src/TRPSTree.cc	/^TRPSTree::TRPSTree( const char* name, const char* title ) : TTree(name, title){$/;"	f	class:TRPSTree
+XAluminumElectrodeHit	include/XAluminumElectrodeHit.hh	/^class XAluminumElectrodeHit : public G4VHit$/;"	c
+XAluminumElectrodeHit	src/XAluminumElectrodeHit.cc	/^XAluminumElectrodeHit::XAluminumElectrodeHit()$/;"	f	class:XAluminumElectrodeHit
+XAluminumElectrodeHit	src/XAluminumElectrodeHit.cc	/^XAluminumElectrodeHit::XAluminumElectrodeHit(const XAluminumElectrodeHit &right)$/;"	f	class:XAluminumElectrodeHit
+XAluminumElectrodeHitAllocator	src/XAluminumElectrodeHit.cc	/^G4Allocator<XAluminumElectrodeHit> XAluminumElectrodeHitAllocator;$/;"	v
+XAluminumElectrodeHit_h	include/XAluminumElectrodeHit.hh	/^#define XAluminumElectrodeHit_h /;"	d
+XAluminumElectrodeHitsCollection	include/XAluminumElectrodeHit.hh	/^typedef G4THitsCollection<XAluminumElectrodeHit> XAluminumElectrodeHitsCollection;$/;"	t
+XAluminumElectrodeSensitivity	include/XAluminumElectrodeSensitivity.hh	/^class XAluminumElectrodeSensitivity : public G4VSensitiveDetector$/;"	c
+XAluminumElectrodeSensitivity	src/XAluminumElectrodeSensitivity.cc	/^XAluminumElectrodeSensitivity::XAluminumElectrodeSensitivity(G4String name)$/;"	f	class:XAluminumElectrodeSensitivity
+XAluminumElectrodeSensitivity_h	include/XAluminumElectrodeSensitivity.hh	/^#define XAluminumElectrodeSensitivity_h /;"	d
+XDetectorConstruction	include/XDetectorConstruction.hh	/^class XDetectorConstruction : public G4VUserDetectorConstruction {$/;"	c
+XDetectorConstruction	src/XDetectorConstruction.cc	/^XDetectorConstruction::XDetectorConstruction()$/;"	f	class:XDetectorConstruction
+XDetectorConstruction_h	include/XDetectorConstruction.hh	/^#define XDetectorConstruction_h /;"	d
+XPhononStackingAction	include/XPhononStackingAction.hh	/^class XPhononStackingAction : public G4UserStackingAction$/;"	c
+XPhononStackingAction	src/XPhononStackingAction.cc	/^XPhononStackingAction::XPhononStackingAction() {;}$/;"	f	class:XPhononStackingAction
+XPhononStackingAction_h	include/XPhononStackingAction.hh	/^#define XPhononStackingAction_h /;"	d
+XPhysicsList	include/XPhysicsList.hh	/^class XPhysicsList : public G4VUserPhysicsList {$/;"	c
+XPhysicsList	src/XPhysicsList.cc	/^XPhysicsList::XPhysicsList(G4int verbose) : G4VUserPhysicsList() {$/;"	f	class:XPhysicsList
+XPhysicsList_h	include/XPhysicsList.hh	/^#define XPhysicsList_h /;"	d
+XPrimaryGeneratorAction	include/XPrimaryGeneratorAction.hh	/^class XPrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction$/;"	c
+XPrimaryGeneratorAction	src/XPrimaryGeneratorAction.cc	/^XPrimaryGeneratorAction::XPrimaryGeneratorAction()$/;"	f	class:XPrimaryGeneratorAction
+XPrimaryGeneratorAction_h	include/XPrimaryGeneratorAction.hh	/^#define XPrimaryGeneratorAction_h /;"	d
+clear	src/EventR.cc	/^void EventR::clear(){$/;"	f	class:EventR
+eventAction	include/EventActionMessenger.hh	/^  EventAction*          eventAction;$/;"	m	class:EventActionMessenger
+eventDir	include/EventActionMessenger.hh	/^  G4UIdirectory*        eventDir;   $/;"	m	class:EventActionMessenger
+eventMessenger	include/EventAction.hh	/^   EventActionMessenger*  eventMessenger;$/;"	m	class:EventAction
+fAluminum	include/XDetectorConstruction.hh	/^  G4Material* fAluminum;$/;"	m	class:XDetectorConstruction
+fConstructed	include/XDetectorConstruction.hh	/^  G4bool fConstructed;$/;"	m	class:XDetectorConstruction
+fEdep	include/TESHit.hh	/^      G4double fEdep;$/;"	m	class:TESHit
+fEdep	include/XAluminumElectrodeHit.hh	/^      G4double fEdep;$/;"	m	class:XAluminumElectrodeHit
+fGermanium	include/XDetectorConstruction.hh	/^  G4Material* fGermanium;$/;"	m	class:XDetectorConstruction
+fHCID	include/TESSensitivity.hh	/^      G4int fHCID;$/;"	m	class:TESSensitivity
+fHCID	include/XAluminumElectrodeSensitivity.hh	/^      G4int fHCID;$/;"	m	class:XAluminumElectrodeSensitivity
+fHitsCollection	include/TESSensitivity.hh	/^  static TESHitsCollection* fHitsCollection;$/;"	m	class:TESSensitivity
+fHitsCollection	include/XAluminumElectrodeSensitivity.hh	/^  static XAluminumElectrodeHitsCollection* fHitsCollection;$/;"	m	class:XAluminumElectrodeSensitivity
+fIfField	include/XDetectorConstruction.hh	/^  G4bool fIfField;$/;"	m	class:XDetectorConstruction
+fLiquidHelium	include/XDetectorConstruction.hh	/^  G4Material* fLiquidHelium;$/;"	m	class:XDetectorConstruction
+fLocalPos	include/TESHit.hh	/^      G4ThreeVector fLocalPos;$/;"	m	class:TESHit
+fLocalPos	include/XAluminumElectrodeHit.hh	/^      G4ThreeVector fLocalPos;$/;"	m	class:XAluminumElectrodeHit
+fNameCmd	include/RunMessenger.hh	/^  G4UIcmdWithAString*        fNameCmd;$/;"	m	class:RunMessenger
+fParticleGun	include/XPrimaryGeneratorAction.hh	/^    G4ParticleGun*                fParticleGun;$/;"	m	class:XPrimaryGeneratorAction
+fPol	include/TESHit.hh	/^      G4int fPol;$/;"	m	class:TESHit
+fRunAction	include/RunMessenger.hh	/^  RunAction* fRunAction;$/;"	m	class:RunMessenger
+fTime	include/TESHit.hh	/^      G4double fTime;$/;"	m	class:TESHit
+fTime	include/XAluminumElectrodeHit.hh	/^      G4double fTime;$/;"	m	class:XAluminumElectrodeHit
+fTungsten	include/XDetectorConstruction.hh	/^  G4Material* fTungsten;$/;"	m	class:XDetectorConstruction
+fWorldPhys	include/XDetectorConstruction.hh	/^  G4VPhysicalVolume* fWorldPhys;$/;"	m	class:XDetectorConstruction
+fWorldPos	include/TESHit.hh	/^      G4ThreeVector fWorldPos;$/;"	m	class:TESHit
+fWorldPos	include/XAluminumElectrodeHit.hh	/^      G4ThreeVector fWorldPos;$/;"	m	class:XAluminumElectrodeHit
+fWriter	include/TESSensitivity.hh	/^  ofstream fWriter; \/\/writing hit posn to file. Temporary fix.$/;"	m	class:TESSensitivity
+fWriter	include/XAluminumElectrodeSensitivity.hh	/^  ofstream fWriter; \/\/writing hit posn to file. Temporary fix.$/;"	m	class:XAluminumElectrodeSensitivity
+fWriter2	include/TESSensitivity.hh	/^  ofstream fWriter2; \/\/writing timing information to file. Temporary fix.$/;"	m	class:TESSensitivity
+fWriter2	include/XAluminumElectrodeSensitivity.hh	/^  ofstream fWriter2; \/\/writing timing information to file. Temporary fix.$/;"	m	class:XAluminumElectrodeSensitivity
+hit	include/EventR.hh	/^		TESHit* hit;$/;"	m	class:EventR
+instance	include/EventR.hh	/^		static EventR* instance;$/;"	m	class:EventR
+instance	include/TRPSTree.hh	/^		static TRPSTree* instance;$/;"	m	class:TRPSTree
+instance	src/EventR.cc	/^EventR* EventR::instance = NULL;$/;"	m	class:EventR	file:
+instance	src/TRPSTree.cc	/^TRPSTree* TRPSTree::instance = NULL;$/;"	m	class:TRPSTree	file:
+main	XGeBox.cc	/^int main(int argc,char** argv)$/;"	f
+max_pairs	include/TRPSTree.hh	/^const int max_pairs = 50000;$/;"	v
+n	include/EventR.hh	/^		int n;$/;"	m	class:EventR
+name	GNUmakefile	/^name := XGeBox$/;"	m
+operator =	src/TESHit.cc	/^const TESHit& TESHit::operator=(const TESHit &right)$/;"	f	class:TESHit
+operator =	src/XAluminumElectrodeHit.cc	/^const XAluminumElectrodeHit& XAluminumElectrodeHit::operator=(const XAluminumElectrodeHit &right)$/;"	f	class:XAluminumElectrodeHit
+operator ==	src/TESHit.cc	/^int TESHit::operator==(const TESHit &\/*right*\/) const$/;"	f	class:TESHit
+operator ==	src/XAluminumElectrodeHit.cc	/^int XAluminumElectrodeHit::operator==(const XAluminumElectrodeHit &\/*right*\/) const$/;"	f	class:XAluminumElectrodeHit
+operator delete	include/TESHit.hh	/^inline void TESHit::operator delete(void* aHit)$/;"	f	class:TESHit
+operator delete	include/XAluminumElectrodeHit.hh	/^inline void XAluminumElectrodeHit::operator delete(void* aHit)$/;"	f	class:XAluminumElectrodeHit
+operator new	include/TESHit.hh	/^inline void* TESHit::operator new(size_t)$/;"	f	class:TESHit
+operator new	include/XAluminumElectrodeHit.hh	/^inline void* XAluminumElectrodeHit::operator new(size_t)$/;"	f	class:XAluminumElectrodeHit
+outfile	include/RunAction.hh	/^  TFile* outfile;$/;"	m	class:RunAction
+positionsX	include/EventR.hh	/^		std::vector<double> positionsX;$/;"	m	class:EventR
+positionsY	include/EventR.hh	/^		std::vector<double> positionsY;$/;"	m	class:EventR
+positionsZ	include/EventR.hh	/^		std::vector<double> positionsZ;$/;"	m	class:EventR
+printModulo	include/EventAction.hh	/^   G4int     printModulo;$/;"	m	class:EventAction
+runAct	include/EventAction.hh	/^   RunAction*  runAct;$/;"	m	class:EventAction
+runMessenger	include/RunAction.hh	/^  RunMessenger* runMessenger;$/;"	m	class:RunAction
+time	include/EventR.hh	/^ 		std::vector<double> time;$/;"	m	class:EventR
+~EventAction	src/EventAction.cc	/^EventAction::~EventAction()$/;"	f	class:EventAction
+~EventActionMessenger	src/EventActionMessenger.cc	/^EventActionMessenger::~EventActionMessenger()$/;"	f	class:EventActionMessenger
+~EventR	src/EventR.cc	/^EventR::~EventR(){$/;"	f	class:EventR
+~RunAction	src/RunAction.cc	/^RunAction::~RunAction()$/;"	f	class:RunAction
+~RunMessenger	src/RunMessenger.cc	/^RunMessenger::~RunMessenger()$/;"	f	class:RunMessenger
+~TESHit	src/TESHit.cc	/^TESHit::~TESHit()$/;"	f	class:TESHit
+~TESSensitivity	src/TESSensitivity.cc	/^TESSensitivity::~TESSensitivity(){$/;"	f	class:TESSensitivity
+~TRPSTree	src/TRPSTree.cc	/^TRPSTree::~TRPSTree(){$/;"	f	class:TRPSTree
+~XAluminumElectrodeHit	src/XAluminumElectrodeHit.cc	/^XAluminumElectrodeHit::~XAluminumElectrodeHit()$/;"	f	class:XAluminumElectrodeHit
+~XAluminumElectrodeSensitivity	src/XAluminumElectrodeSensitivity.cc	/^XAluminumElectrodeSensitivity::~XAluminumElectrodeSensitivity(){$/;"	f	class:XAluminumElectrodeSensitivity
+~XDetectorConstruction	src/XDetectorConstruction.cc	/^XDetectorConstruction::~XDetectorConstruction() {;}$/;"	f	class:XDetectorConstruction
+~XPhononStackingAction	src/XPhononStackingAction.cc	/^XPhononStackingAction::~XPhononStackingAction() {;}$/;"	f	class:XPhononStackingAction
+~XPhysicsList	src/XPhysicsList.cc	/^XPhysicsList::~XPhysicsList() {;}$/;"	f	class:XPhysicsList
+~XPrimaryGeneratorAction	src/XPrimaryGeneratorAction.cc	/^XPrimaryGeneratorAction::~XPrimaryGeneratorAction()$/;"	f	class:XPrimaryGeneratorAction
