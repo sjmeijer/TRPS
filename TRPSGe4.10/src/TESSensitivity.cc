@@ -26,34 +26,34 @@ TESSensitivity::TESSensitivity(G4String name)
   G4String HCname;
   collectionName.insert(HCname="TESHit");
   fHCID = -1;
-  fWriter.open("caustic.ssv", fstream::out | fstream::ate);
-  fWriter2.open("timing.ssv", fstream::out | fstream::ate);
+  //fWriter.open("caustic.ssv", fstream::out | fstream::ate);
+  //fWriter2.open("timing.ssv", fstream::out | fstream::ate);
 
-  if(!fWriter.is_open()){
-    G4cout<<"\nTESSensitivity::Constructor:";
-    G4cout<<"\n\tFailed to open caustic.ssv for appending data.";
-    G4cout<<"\n\tCreating caustic.ssv" << G4endl;
-    fWriter.open("caustic.ssv");
-  }
+  //if(!fWriter.is_open()){
+  //  G4cout<<"\nTESSensitivity::Constructor:";
+  //  G4cout<<"\n\tFailed to open caustic.ssv for appending data.";
+  //  G4cout<<"\n\tCreating caustic.ssv" << G4endl;
+  //  fWriter.open("caustic.ssv");
+  //}
 
-  if(!fWriter2.is_open()){
-    G4cout<<"\nTESSensitivity::Constructor: ";
-    G4cout<<"\n\tFailed to open timing.ssv for appending data.";
-    G4cout<<"\n\tCreating timing.ssv." << G4endl;
-    fWriter2.open("timing.ssv");
-  }
+  //if(!fWriter2.is_open()){
+  //  G4cout<<"\nTESSensitivity::Constructor: ";
+  //  G4cout<<"\n\tFailed to open timing.ssv for appending data.";
+  //  G4cout<<"\n\tCreating timing.ssv." << G4endl;
+  //  fWriter2.open("timing.ssv");
+  //}
 
-  if(!(fWriter.is_open() && fWriter2.is_open())){
-    G4cout<<"\nTESSensitivity::Constructor: "
-          <<"\nERROR: COULD NOT CREATE OUTPUT FILES FOR WRITING" << G4endl;
-  }
+  //if(!(fWriter.is_open() && fWriter2.is_open())){
+  //  G4cout<<"\nTESSensitivity::Constructor: "
+  //        <<"\nERROR: COULD NOT CREATE OUTPUT FILES FOR WRITING" << G4endl;
+  //}
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo....
 
 TESSensitivity::~TESSensitivity(){
-  fWriter.close();
-  fWriter2.close();
+  //fWriter.close();
+  //fWriter2.close();
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo....
@@ -116,14 +116,14 @@ G4bool TESSensitivity::ProcessHits(G4Step* aStep,
   eventR->PushTESX(fWorldPos.getX()/mm);
   eventR->PushTESY(fWorldPos.getY()/mm);
   eventR->PushTESZ(fWorldPos.getZ()/mm);
-  //eventR->Print();
+  eventR->Print();
 
-  fWriter<<"\n"<<fWorldPos.getX()/mm
-         <<","<<fWorldPos.getY()/mm
-         <<","<<fWorldPos.getZ()/mm;
+  //fWriter<<"\n"<<fWorldPos.getX()/mm
+  //       <<","<<fWorldPos.getY()/mm
+  //       <<","<<fWorldPos.getZ()/mm;
 
-  fWriter2<<"\n"<<postStepPoint->GetGlobalTime()/ns<<" "
-          <<aHit->GetEDep()/eV;
+  //fWriter2<<"\n"<<postStepPoint->GetGlobalTime()/ns<<" "
+  //        <<aHit->GetEDep()/eV;
 
   return true;
 }

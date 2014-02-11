@@ -46,7 +46,6 @@ void RunAction::BeginOfRunAction(const G4Run* aRun)
 	CLHEP::HepRandom::setTheSeeds(seeds);
 	CLHEP::HepRandom::showEngineStatus();
 	
-        TRPSTree* mytree = TRPSTree::Instance("tree","tree");
 }
 
 void RunAction::SetOutputFileName(G4String s){
@@ -66,6 +65,7 @@ void RunAction::EndOfRunAction(const G4Run* aRun)
 
 	G4cout<<"Writing tree..."<<G4endl;
 	outfile->cd();
+        TRPSTree* mytree = TRPSTree::Instance("tree","tree");
 	mytree->Write();
 	G4cout<<"tree written "<<G4endl;
 	outfile->Close();

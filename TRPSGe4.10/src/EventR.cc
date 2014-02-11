@@ -28,7 +28,7 @@ void EventR::Print(){
 	G4cout << " TES: " << '\t' << " time: " << '\t' << " Edep: " << '\t' << " Pol. " << G4endl;
 	for(int i = 0; i<Pol.size(); i++)
 	{
-		G4cout << TESid[i] << time[i] << Edep[i] << Pol[i] << G4endl;
+		G4cout << TESid[i] << '\t' << time[i] << '\t' << Edep[i] << '\t' << Pol[i] << G4endl;
 	}
 }
 
