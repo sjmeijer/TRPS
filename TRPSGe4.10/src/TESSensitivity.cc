@@ -94,6 +94,7 @@ G4bool TESSensitivity::ProcessHits(G4Step* aStep,
   G4StepPoint* postStepPoint = aStep->GetPostStepPoint();
   G4TouchableHistory* theTouchable
     = (G4TouchableHistory*)(preStepPoint->GetTouchable());
+  G4int copynum = theTouchable->GetVolume()->GetCopyNo();
   G4ThreeVector fWorldPos = postStepPoint->GetPosition();
   G4ThreeVector fLocalPos
     = theTouchable->GetHistory()->GetTopTransform().TransformPoint(fWorldPos);
@@ -108,13 +109,14 @@ G4bool TESSensitivity::ProcessHits(G4Step* aStep,
   fHitsCollection->insert(aHit);
 
   EventR* eventR = EventR::Instance();
-  eventR->PushTESid(1);
+  eventR->PushTESid(copynum);
   eventR->PushTEStime(postStepPoint->GetGlobalTime());
   eventR->PushTESEdep(edp);
   eventR->PushPol(pol);
   eventR->PushTESX(fWorldPos.getX()/mm);
   eventR->PushTESY(fWorldPos.getY()/mm);
   eventR->PushTESZ(fWorldPos.getZ()/mm);
+  //eventR->Print();
 
   fWriter<<"\n"<<fWorldPos.getX()/mm
          <<","<<fWorldPos.getY()/mm

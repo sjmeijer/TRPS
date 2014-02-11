@@ -139,19 +139,19 @@ void XDetectorConstruction::SetupGeometry()
   G4VSolid* fAlSolid = new G4Box("fAluminumSolid",2.0*cm,2.0*cm,0.025*cm);
 
   G4LogicalVolume* fAlLogical = new G4LogicalVolume(fAlSolid,fAluminum,"fAlLogical");
-  new G4PVPlacement(0,G4ThreeVector(0.,0.,2.5*cm+0.025*cm),fAlLogical,"fAlPhysical",worldLogical,false,0);
-  new G4PVPlacement(0,G4ThreeVector(0.,0.,-2.5*cm-0.025*cm),fAlLogical,"fAlPhysical",worldLogical,false,1);
+  new G4PVPlacement(0,G4ThreeVector(0.,0.,2.5*cm+0.025*cm),fAlLogical,"fAlPhysical",worldLogical,true,0);
+  new G4PVPlacement(0,G4ThreeVector(0.,0.,-2.5*cm-0.025*cm),fAlLogical,"fAlPhysical",worldLogical,true,1);
   G4RotationMatrix* rotm23 = new G4RotationMatrix();
   rotm23->rotateY(90*deg);
-  new G4PVPlacement(rotm23,G4ThreeVector(2.5*cm+0.025*cm,0.,0.),fAlLogical,"fAlPhysical",worldLogical,false,2);
-  new G4PVPlacement(rotm23,G4ThreeVector(-2.5*cm-0.025*cm,0.,0.),fAlLogical,"fAlPhysical",worldLogical,false,3);
+  new G4PVPlacement(rotm23,G4ThreeVector(2.5*cm+0.025*cm,0.,0.),fAlLogical,"fAlPhysical",worldLogical,true,2);
+  new G4PVPlacement(rotm23,G4ThreeVector(-2.5*cm-0.025*cm,0.,0.),fAlLogical,"fAlPhysical",worldLogical,true,3);
   G4RotationMatrix* rotm45 = new G4RotationMatrix();
   rotm45->rotateX(90*deg);
-  new G4PVPlacement(rotm45,G4ThreeVector(0.,2.5*cm+0.025*cm,0.),fAlLogical,"fAlPhysical",worldLogical,false,4);
-  new G4PVPlacement(rotm45,G4ThreeVector(0.,-2.5*cm-0.025*cm,0.),fAlLogical,"fAlPhysical",worldLogical,false,5);
+  new G4PVPlacement(rotm45,G4ThreeVector(0.,2.5*cm+0.025*cm,0.),fAlLogical,"fAlPhysical",worldLogical,true,4);
+  new G4PVPlacement(rotm45,G4ThreeVector(0.,-2.5*cm-0.025*cm,0.),fAlLogical,"fAlPhysical",worldLogical,true,5);
 
   //
-  // detector -- Note : Aluminum electrode sensitivity is attached to Germanium 
+  // detector -- Note : Aluminum electrode sensitivity is attached to Germanium because phonons don't step into the Al. 
   //
   G4SDManager* SDman = G4SDManager::GetSDMpointer();
   TESSensitivity* electrodeSensitivity = new TESSensitivity("TES");
