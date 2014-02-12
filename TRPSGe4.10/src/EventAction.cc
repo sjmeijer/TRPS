@@ -34,7 +34,8 @@ void EventAction::BeginOfEventAction(const G4Event* evt)
 
 void EventAction::EndOfEventAction(const G4Event* evt)
 {
-  TRPSTree* mytree = TRPSTree::Instance("tree","tree");
+  G4int evtNb = evt->GetEventID();
+  TRPSTree* mytree = TRPSTree::Instance("tree","tree"); 
   EventR* eventR = EventR::Instance();
   mytree->Fill();
   G4cout << "\n---> HC of event: " << evtNb << G4endl;

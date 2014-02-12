@@ -45,6 +45,7 @@
 #include "XPhysicsList.hh"
 #include "XPrimaryGeneratorAction.hh"
 #include "RunAction.hh"
+#include "EventAction.hh"
 #include "XPhononStackingAction.hh"
 
 int main(int argc,char** argv)
@@ -77,6 +78,10 @@ int main(int argc,char** argv)
  
  RunAction* run_action = new RunAction;
  runManager->SetUserAction(run_action);
+ 
+ EventAction* evt_action = new EventAction(run_action);
+ runManager->SetUserAction(evt_action);
+ 
  G4String fileName;
  if(argc > 2){
 	fileName=argv[2];
