@@ -51,7 +51,7 @@ XPrimaryGeneratorAction::XPrimaryGeneratorAction()
   // default particle kinematic
   fParticleGun->SetParticleDefinition(G4PhononLong::PhononDefinition());
   fParticleGun->SetParticleMomentumDirection(G4RandomDirection());
-  fParticleGun->SetParticlePosition(G4ThreeVector(0.0,0.0,0.0));
+  fParticleGun->SetParticlePosition(G4ThreeVector(0.0,0.0,-24.990));
   fParticleGun->SetParticleEnergy(1e-4*eV);  
 }
 
@@ -86,7 +86,8 @@ void XPrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
   //Do not set momentum direction here.
   //Any momentum direction set here will be overwritten
   //by XPhononStackingAction::ClassifyNewTrack
-  fParticleGun->SetParticleEnergy(0.0075*eV);
+  //fParticleGun->SetParticleEnergy(0.0075*eV);
+  fParticleGun->SetParticleEnergy(0.0001*eV);
   fParticleGun->GeneratePrimaryVertex(anEvent);
 
 }
