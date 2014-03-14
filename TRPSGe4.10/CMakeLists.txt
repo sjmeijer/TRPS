@@ -54,7 +54,7 @@ set(TRPSGe_SCRIPTS
   )
 
 set(TRPSGe_DATA
-    CrystalMaps
+    CrystalMaps/
   )
 
 foreach(_script ${TRPSGe_SCRIPTS})
@@ -64,6 +64,8 @@ foreach(_script ${TRPSGe_SCRIPTS})
     COPYONLY
     )
 endforeach()
+
+file(COPY ${PROJECT_SOURCE_DIR}/${TRPSGe_DATA} DESTINATION ${PROJECT_BINARY_DIR}/${TRPSGe_DATA})
 
 #----------------------------------------------------------------------------
 # For internal Geant4 use - but has no effect if you build this
