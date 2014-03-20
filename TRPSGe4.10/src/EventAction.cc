@@ -35,9 +35,14 @@ void EventAction::BeginOfEventAction(const G4Event* evt)
 void EventAction::EndOfEventAction(const G4Event* evt)
 {
   G4int evtNb = evt->GetEventID();
-  TRPSTree* mytree = TRPSTree::Instance("tree","tree"); 
+    G4String treeID = "tree"+G4UIcommand::ConvertToString(RunAction::BeginOfRunAction::aRun->GetRunID());
+  TRPSTree* mytree = TRPSTree::Instance(treeID,"A tree");
   EventR* eventR = EventR::Instance();
+
+//  G4cout << "\n TEST: " << RunAction::outfile->IsOpen() << "open?"  G4endl;
+
   mytree->Fill();
+
   G4cout << "\n---> HC of event: " << evtNb << G4endl;
   eventR->Print();
   G4cout << "\n---> End of event: " << evtNb << G4endl;

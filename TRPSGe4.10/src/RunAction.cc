@@ -27,7 +27,10 @@ void RunAction::BeginOfRunAction(const G4Run* aRun)
 	G4RunManager::GetRunManager()->SetRandomNumberStore(true);
 
 	//initialize output
-	TRPSTree* mytree = TRPSTree::Instance("tree","tree");
+    treeID = "tree"+G4UIcommand::ConvertToString(aRun->GetRunID());
+    G4cout << "Tree name will be: " << treeID << G4endl;
+    
+	mytree = TRPSTree::Instance(treeID,"A tree containing event data");
 
 	// outfile = new TFile("prova.root","RECREATE");
 	runMessenger = new RunMessenger(this);
@@ -53,7 +56,7 @@ void RunAction::SetOutputFileName(G4String s){
 	//	outfile->Close();
 	//	}
 	std::string name = s+".root";
-	outfile = new TFile(name.c_str(),"RECREATE");
+	outfile = new TFile(name.c_str(),"UPDATE");
 	G4cout<<"file name set to "<<name.c_str()<<G4endl;
 
 }
@@ -65,7 +68,10 @@ void RunAction::EndOfRunAction(const G4Run* aRun)
 
 	G4cout<<"Writing tree..."<<G4endl;
 	outfile->cd();
-        TRPSTree* mytree = TRPSTree::Instance("tree","tree");
+//        TRPSTree* mytree = TRPSTree::Instance("tree"+aRun->GetRunID(),"A tree containing event data");
+
+    TRPSTree* mytree = TRPSTree::Instance("t","A tree containing event data");
+    
 	mytree->Write();
 	G4cout<<"tree written "<<G4endl;
 	outfile->Close();
